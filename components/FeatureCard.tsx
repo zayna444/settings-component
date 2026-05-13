@@ -7,8 +7,8 @@ export interface FeatureCardProps {
 }
 
 /**
- * White rounded card used to group feature toggle rows.
- *  "Turn Features ON / OFF:" heading by default.
+  White rounded card used to group feature toggle rows
+   heading by default...
  */
 export function FeatureCard({
   heading = (

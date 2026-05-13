@@ -1,17 +1,17 @@
 import React from "react";
 
 export interface ToggleSwitchProps {
-  /** Whether the toggle is in the ON state */
+  /* if the toggle is in the ON state */
   enabled: boolean;
-  /** Called when the user clicks the toggle */
+  /* called when the user clicks the toggle */
   onToggle: () => void;
-  /** Accessible label for screen readers */
+  /* accessible label for screen readers */
   ariaLabel?: string;
 }
 
 /**
- * A green/red pill toggle switch that matches the OMNImine Features page style.
- */
+  green n red pill toggle switch 
+ **/
 export function ToggleSwitch({ enabled, onToggle, ariaLabel }: ToggleSwitchProps) {
   return (
     <button

@@ -12,9 +12,14 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.0",
+    "@types/react": "^19.2.14",
     "typescript": "~5.9.3"
   },
-  "keywords": ["react", "settings", "feature-toggle", "omnisoft"],
+  "keywords": [
+    "react",
+    "settings",
+    "feature-toggle",
+    "omnisoft"
+  ],
   "license": "MIT"
 }

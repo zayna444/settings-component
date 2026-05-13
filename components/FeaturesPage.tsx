@@ -4,11 +4,11 @@ import { FeatureCard } from "./FeatureCard";
 import { FeatureRow } from "./FeatureRow";
 
 export interface Feature {
-  /** Unique identifier for the feature */
+  /** identifiers for the feature */
   key: string;
-  /** Human-readable label displayed next to the toggle */
+  /** le label displayed next to the toggle */
   label: string;
-  /** Initial enabled state */
+  /** initial enabled state */
   enabled: boolean;
 }
 
@@ -18,7 +18,7 @@ export interface FeaturesPageProps {
   onChange?: (features: Feature[]) => void;
 }
 
-/** Self-managed features page */
+/** self managed features page */
 export function FeaturesPage({
   title = "Admin › System Features",
   defaultFeatures,
@@ -53,15 +53,14 @@ export function FeaturesPage({
   );
 }
 
-// ─── Controlled variant ──────────────────────────────────────────────────────
-
+/** Controlled variant , caller owns feature state and toggle handler */
 export interface FeaturesPageControlledProps {
   title?: string;
   features: Feature[];
   onToggle: (key: string) => void;
 }
 
-/** Controlled features page — you own the state */
+/**    you control the state.... */
 export function FeaturesPageControlled({
   title = "Admin › System Features",
   features,
