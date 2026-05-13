@@ -10,7 +10,16 @@ export interface FeatureRowProps {
   onToggle: () => void;
 }
 
-/** a single labelled toggle row inside the Feature Card */
+/**
+ *  single labelled toggle row inside a FeatureCard.
+ *
+ * @example
+ * <FeatureRow
+ *   label="Dark Mode"
+ *   enabled={isDarkMode}
+ *   onToggle={() => setIsDarkMode(v => !v)}
+ * />
+ */
 export function FeatureRow({ label, enabled, onToggle }: FeatureRowProps) {
   return (
     <div className="flex items-center justify-between">

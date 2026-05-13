@@ -7,8 +7,12 @@ export interface FeatureCardProps {
 }
 
 /**
-  White rounded card used to group feature toggle rows
-   heading by default...
+ * that white rounded card used to group feature toggle rows.
+ *
+ * @example
+ * <FeatureCard heading="My Features">
+ *   <FeatureRow label="Dark Mode" enabled={true} onToggle={() => {}} />
+ * </FeatureCard>
  */
 export function FeatureCard({
   heading = (

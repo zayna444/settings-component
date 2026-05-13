@@ -18,7 +18,18 @@ export interface FeaturesPageProps {
   onChange?: (features: Feature[]) => void;
 }
 
-/** self managed features page */
+/**
+ * Self contained features page — manages its own toggle state internally....
+ *
+ * @example
+ * <FeaturesPage
+ *   defaultFeatures={[
+ *     { key: "darkMode", label: "Dark Mode", enabled: false },
+ *     { key: "analytics", label: "Analytics", enabled: true },
+ *   ]}
+ *   onChange={(updated) => console.log(updated)}
+ * />
+ */
 export function FeaturesPage({
   title = "Admin › System Features",
   defaultFeatures,
@@ -60,7 +71,17 @@ export interface FeaturesPageControlledProps {
   onToggle: (key: string) => void;
 }
 
-/**    you control the state.... */
+/**
+ * Controlled variant — caller owns feature state and toggle handler.
+ *
+ * @example
+ * <FeaturesPageControlled
+ *   features={features}
+ *   onToggle={(key) => setFeatures(prev =>
+ *     prev.map(f => f.key === key ? { ...f, enabled: !f.enabled } : f)
+ *   )}
+ * />
+ */
 export function FeaturesPageControlled({
   title = "Admin › System Features",
   features,

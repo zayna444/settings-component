@@ -5,7 +5,12 @@ export interface PageTitleProps {
   title: string;
 }
 
-/** Top of page title thing */
+/**
+ * Top-of-page heading.
+ *
+ * @example
+ * <PageTitle title="Admin › System Features" />
+ */
 export function PageTitle({ title }: PageTitleProps) {
   return <div className="text-lg font-medium">{title}</div>;
 }

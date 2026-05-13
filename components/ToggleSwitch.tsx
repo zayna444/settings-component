@@ -10,8 +10,15 @@ export interface ToggleSwitchProps {
 }
 
 /**
-  green n red pill toggle switch 
- **/
+ * Green/red pill toggle switch.
+ *
+ * @example
+ * <ToggleSwitch
+ *   enabled={isOn}
+ *   onToggle={() => setIsOn(v => !v)}
+ *   ariaLabel="Enable notifications"
+ * />
+ */
 export function ToggleSwitch({ enabled, onToggle, ariaLabel }: ToggleSwitchProps) {
   return (
     <button
